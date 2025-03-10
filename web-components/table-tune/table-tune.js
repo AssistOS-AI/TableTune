@@ -29,6 +29,38 @@ export class TableTune {
             imageElement.classList.remove("hidden");
             imageElement.src = await spaceModule.getImageURL(this.paragraphPresenter.paragraph.commands.image.id);
         }
+        const table = document.getElementById("dynamicTable");
+
+        document.getElementById("addRow").addEventListener("click", () => {
+            const newRow = table.insertRow();
+            const cellCount = table.rows[0].cells.length;
+            for (let i = 0; i < cellCount; i++) {
+                const newCell = newRow.insertCell();
+                newCell.contentEditable = "true";
+            }
+        });
+
+        document.getElementById("addCol").addEventListener("click", () => {
+            for (let i = 0; i < table.rows.length; i++) {
+                const newCell = table.rows[i].insertCell();
+                newCell.contentEditable = "true";
+            }
+        });
+
+        document.getElementById("deleteRow").addEventListener("click", () => {
+            if (table.rows.length > 1) {
+                table.deleteRow(-1);
+            }
+        });
+
+        document.getElementById("deleteCol").addEventListener("click", () => {
+            const cellCount = table.rows[0].cells.length;
+            if (cellCount > 1) {
+                for (let i = 0; i < table.rows.length; i++) {
+                    table.rows[i].deleteCell(-1);
+                }
+            }
+        });
 
     }
     async insertImage(){
