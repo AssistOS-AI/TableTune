@@ -1,0 +1,37 @@
+{
+  "applicationName":"TableTune",
+  "version": "0.0.1",
+  "entryPointComponent": "table-tune",
+  "description": "Create and edit Tables",
+  "componentsDirPath": "web-components",
+  "components":[
+    {
+      "name": "table-tune",
+      "presenterClassName": "TableTune",
+      "type": "pages"
+    }
+  ],
+  "services": [
+    {
+      "serviceName": "RoutingService",
+      "servicePath": "services/RoutingService.js"
+    }
+  ],
+  "manager": {
+    "path": "manager.js",
+    "name": "Manager"
+  },
+  "plugins": {
+    "abstract": [],
+    "paragraph": [
+      {
+        "tooltip": "Table Tune",
+        "component": "table-tune",
+        "icon": "assets/icons/table.svg",
+        "presenter": "TableTune",
+        "type": "embedded"
+      }
+    ]
+  }
+}
+
