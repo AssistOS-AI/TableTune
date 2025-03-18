@@ -1,10 +1,16 @@
-
-table-tune{
+table-tune {
     display: block;
     width: 100%;
     background-color: var(--white);
     border-radius: 5px;
     padding: 20px;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
 }
 
 .actions-section {
@@ -15,22 +21,36 @@ table-tune{
     padding: 15px;
     background-color: #ffffff;
     border-radius: 8px;
+    width: auto;
+}
+
+.options-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     width: 100%;
-    max-width: none;
 }
-label {
-    font-size: 14px;
-    font-weight: bold;
-    align-self: flex-start;
+
+.bg-color-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    width: auto;
 }
-textarea {
-    width: 100%;
-    height: 120px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 8px;
-    font-size: 13px;
+
+.cell-dimensions-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    width: auto;
 }
+
 .general-button {
     background-color: #66b3ff;
     color: white;
@@ -39,25 +59,86 @@ textarea {
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
-    width: 100%;
 }
+
 .general-button:hover {
     background-color: #3399ff;
 }
 
+/* Tabel și celule */
 table, th, td {
     border: 1px solid #000;
     border-collapse: collapse;
+    position: relative;
 }
+
+td, th {
+    white-space: normal;
+    overflow-wrap: break-word;
+    text-align: left;
+}
+
 td {
     width: 120px;
-    height: 30px;
-    text-align: center;
 }
+
 button {
     margin: 5px;
     padding: 5px 10px;
 }
-.actions-section {
-    margin-bottom: 10px;
+
+.resizer-col {
+    width: 5px;
+    cursor: col-resize;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
 }
+
+.resizer-row {
+    height: 5px;
+    cursor: row-resize;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.cell-dimensions-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    width: auto;
+}
+
+.context-menu {
+    position: absolute;
+    display: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 150px;
+    z-index: 999;
+}
+
+.context-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 5px 0;
+}
+
+.context-menu li {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.context-menu li:hover {
+    background-color: #e6e6e6;
+}
+

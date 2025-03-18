@@ -1,17 +1,53 @@
-<div class="actions-section">
-    <button id="addRow">Adaugă rând</button>
-    <button id="addCol">Adaugă coloană</button>
-    <button id="deleteRow">Șterge rând</button>
-    <button id="deleteCol">Șterge coloană</button>
-</div>
+<div class="container">
+    <div class="actions-section">
+        <button id="addRow" class="general-button">Add row</button>
+        <button id="addCol" class="general-button">Add column</button>
+        <button id="deleteRow" class="general-button">Delete row</button>
+        <button id="deleteCol" class="general-button">Delete column</button>
+        <div class="bg-color-section">
+            <label for="bgColorSelect">Choose background color:</label>
+            <select id="bgColorSelect">
+                <option value="">-- No color --</option>
+                <option value="lightblue">Light Blue</option>
+                <option value="lightgreen">Light Green</option>
+                <option value="khaki">Khaki</option>
+                <option value="lightpink">Light Pink</option>
+                <option value="lavender">Lavender</option>
+                <option value="lightcoral">Light Coral</option>
+                <option value="lightyellow">Light Yellow</option>
+                <option value="lightgrey">Light Grey</option>
+            </select>
+        </div>
+    </div>
 
-<table id="dynamicTable">
-    <tr>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-    </tr>
-    <tr>
-        <td contenteditable="true"></td>
-        <td contenteditable="true"></td>
-    </tr>
-</table>
+    <div class="options-section">
+
+        <div class="cell-dimensions-section">
+            <label for="cellWidthInput">Cell Width (px):</label>
+            <input type="number" id="cellWidthInput" placeholder="Enter cell width">
+            <label for="cellHeightInput">Cell Height (px):</label>
+            <input type="number" id="cellHeightInput" placeholder="Enter cell height">
+            <button id="applyDimensions" class="general-button">Apply Dimensions</button>
+        </div>
+
+        <table id="dynamicTable">
+            <tr>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+            </tr>
+        </table>
+
+        <div id="contextMenu" class="context-menu">
+            <p>BUna ana</p>
+            <ul>
+                <li id="insertRowAbove">Insert row above</li>
+                <li id="insertRowBelow">Insert row below</li>
+                <!--                <li id="deleteRow">Delete row</li>-->
+            </ul>
+        </div>
+    </div>
+</div>
