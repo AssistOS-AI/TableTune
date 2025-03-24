@@ -18,17 +18,12 @@
                 <option value="lightgrey">Light Grey</option>
             </select>
         </div>
+
+        <button id="downloadJson" class="general-button">Download as JSON</button>
+
     </div>
 
     <div class="options-section">
-
-        <div class="cell-dimensions-section">
-            <label for="cellWidthInput">Cell Width (px):</label>
-            <input type="number" id="cellWidthInput" placeholder="Enter cell width">
-            <label for="cellHeightInput">Cell Height (px):</label>
-            <input type="number" id="cellHeightInput" placeholder="Enter cell height">
-            <button id="applyDimensions" class="general-button">Apply Dimensions</button>
-        </div>
 
         <table id="dynamicTable">
             <tr>
@@ -40,14 +35,15 @@
                 <td contenteditable="true"></td>
             </tr>
         </table>
+    </div>
 
-        <div id="contextMenu" class="context-menu">
-            <p>BUna ana</p>
-            <ul>
-                <li id="insertRowAbove">Insert row above</li>
-                <li id="insertRowBelow">Insert row below</li>
-                <!--                <li id="deleteRow">Delete row</li>-->
-            </ul>
-        </div>
+    <div id="contextMenu" class="context-menu hidden">
+        <div class="menu-item" data-action="insertRowAbove">Insert Row Above</div>
+        <div class="menu-item" data-action="insertRowBelow">Insert Row Below</div>
+        <div class="menu-item" data-action="deleteRow">Delete Row</div>
+        <hr>
+        <div class="menu-item" data-action="insertColLeft">Insert Column Left</div>
+        <div class="menu-item" data-action="insertColRight">Insert Column Right</div>
+        <div class="menu-item" data-action="deleteCol">Delete Column</div>
     </div>
 </div>
